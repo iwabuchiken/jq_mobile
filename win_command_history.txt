@@ -53,31 +53,31 @@ copy C:\WORKS\WORKSPACES_APTANA\ResearchHelper\Gemfile .
 
 bundle update
 
-[Git 20120529_174048]
+[Git ]
 ### CREATE REPO AT GitHub	###
 
-git init
+#*git init
 
-git add .
+#*git add .
 
-git commit -a
+#*git commit -a
 
-git remote add origin git@github.com:iwabuchiken/ResearchHelper2.git
+#*git remote add origin git@github.com:iwabuchiken/jq_mobile.git
 
-g p origin master
+#*g p origin master
 
 ### BROWSE GitHub	###
 
-[heroku 20120529_174501]
-*gem install heroku --no-ri --no-rdoc
+[heroku ]
+#*gem install heroku --no-ri --no-rdoc
 
-*heroku keys:add
+#*heroku keys:add
 
-*heroku create --stack cedar
+#*heroku create --stack cedar
 
-*heroku rename cosmos-research-helper-2
+#*heroku rename cosmos-jq-mobile
 
-*#g p heroku master
+#*g p heroku master
 
 #*heroku open
 
@@ -85,19 +85,19 @@ g p origin master
 
 ~git remote add heroku git@heroku.com:cosmos-english-reader.git
 
-[/Set up 20120529_173711]----------------------------
+[/Set up ]----------------------------
 
 [Model]-------------------------------
-#*rails generate scaffold Article title:string text:text url:string
+rails generate scaffold Article title:string text:text url:string
 
-#*bundle exec rake db:migrate
+bundle exec rake db:migrate
 
-#*heroku run rake db:migrate
+heroku run rake db:migrate
 
 
 [Model]-------------------------------
-#*rails generate scaffold Memo text:text url:string article_id:integer 
-#*bundle exec rake db:migrate
+rails generate scaffold Memo text:text url:string article_id:integer 
+bundle exec rake db:migrate
 heroku run rake db:migrate
 
 [Git: grep]-------------------------------
@@ -107,30 +107,30 @@ git log -3 --grep=beautify
 git log -3 --grep=B4
 
 [Model: Genre]-------------------------------
-#*rails generate scaffold Genre name:string article_id:integer
-#*bundle exec rake db:migrate
+rails generate scaffold Genre name:string article_id:integer
+bundle exec rake db:migrate
 
-#*rails generate migration DeleteColumnFromGenreArticleId
-#*bundle exec rake db:migrate
-#*rake db:rollback
-#*heroku run rake db:migrate
+rails generate migration DeleteColumnFromGenreArticleId
+bundle exec rake db:migrate
+rake db:rollback
+heroku run rake db:migrate
 
 [Git: commit]-------------------------------
 Change in logistics files
 
 [Migration: add column]-------------------------------
-#*rails generate migration AddColumnArticleIdToArticle
+rails generate migration AddColumnArticleIdToArticle
 #bundle exec rake db:migrate
 heroku run rake db:migrate
 
 
 [20120703_150233]====================================
 [Model]-------------------------------
-#*rails generate scaffold Log activity:string memos:text
+rails generate scaffold Log activity:string memos:text
 
-#*bundle exec rake db:migrate
+bundle exec rake db:migrate
 
-#*heroku run rake db:migrate
+heroku run rake db:migrate
 
 
 
