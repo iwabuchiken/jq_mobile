@@ -1,0 +1,138 @@
+a
+cd C:\WORKS\WORKSPACES_APTANA\jq_mobile
+start %SystemRoot%\system32\cmd.exe
+C:\WORKS\WORKSPACES_ANDROID\FM\Activity_log.mm C:\WORKS\WORKSPACES_ANDROID\FM\jQuery_mobile\jQuery_mobile.mm
+
+a
+rails s --port 3001
+
+a
+cd C:\WORKS\WORKSPACES_APTANA\jq_mobile
+gitk
+
+a
+cd C:\WORKS\WORKSPACES_APTANA\jq_mobile
+a
+gitk
+
+(Rails)
+a
+cd C:\WORKS\WORKSPACES_APTANA\jq_mobile
+rails s --port 3000
+
+a
+start C:\"Documents and Settings"\iwabuchiken\"Local Settings"\"Application Data"\Google\Chrome\Application\chrome.exe http://localhost:3000/
+
+C:\WORKS\WORKSPACES_ANDROID\FM\Activity_log.mm C:\WORKS\WORKSPACES_ANDROID\FM\jQuery_mobile\jQuery_mobile.mm
+
+(Git for FreeMind files)
+pushd C:\WORKS\WORKSPACES_APTANA\FM_APTANA
+gitk
+
+(Git)
+git init
+g a .
+gitk
+
+git log --grep=B4 -3
+git log --grep=master -6
+
+
+[Set up 20120529_173711]----------------------------
+rails new ResearchHelper2
+
+copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\.project .
+
+### EDIT .project#name	###
+
+### IMPORT TO APTANA	###
+
+copy C:\WORKS\WORKSPACES_APTANA\ResearchHelper\win_command_history.txt .
+
+copy C:\WORKS\WORKSPACES_APTANA\ResearchHelper\Gemfile .
+
+bundle update
+
+[Git 20120529_174048]
+### CREATE REPO AT GitHub	###
+
+git init
+
+git add .
+
+git commit -a
+
+git remote add origin git@github.com:iwabuchiken/ResearchHelper2.git
+
+g p origin master
+
+### BROWSE GitHub	###
+
+[heroku 20120529_174501]
+*gem install heroku --no-ri --no-rdoc
+
+*heroku keys:add
+
+*heroku create --stack cedar
+
+*heroku rename cosmos-research-helper-2
+
+*#g p heroku master
+
+#*heroku open
+
+~git remote rm heroku
+
+~git remote add heroku git@heroku.com:cosmos-english-reader.git
+
+[/Set up 20120529_173711]----------------------------
+
+[Model]-------------------------------
+#*rails generate scaffold Article title:string text:text url:string
+
+#*bundle exec rake db:migrate
+
+#*heroku run rake db:migrate
+
+
+[Model]-------------------------------
+#*rails generate scaffold Memo text:text url:string article_id:integer 
+#*bundle exec rake db:migrate
+heroku run rake db:migrate
+
+[Git: grep]-------------------------------
+git log -3 --grep=master
+git log -3 --grep=logistics
+git log -3 --grep=beautify
+git log -3 --grep=B4
+
+[Model: Genre]-------------------------------
+#*rails generate scaffold Genre name:string article_id:integer
+#*bundle exec rake db:migrate
+
+#*rails generate migration DeleteColumnFromGenreArticleId
+#*bundle exec rake db:migrate
+#*rake db:rollback
+#*heroku run rake db:migrate
+
+[Git: commit]-------------------------------
+Change in logistics files
+
+[Migration: add column]-------------------------------
+#*rails generate migration AddColumnArticleIdToArticle
+#bundle exec rake db:migrate
+heroku run rake db:migrate
+
+
+[20120703_150233]====================================
+[Model]-------------------------------
+#*rails generate scaffold Log activity:string memos:text
+
+#*bundle exec rake db:migrate
+
+#*heroku run rake db:migrate
+
+
+
+
+============EOF============
