@@ -92,8 +92,11 @@ rails generate scaffold Article title:string text:text url:string
 
 bundle exec rake db:migrate
 
+### Edit: index.html, routes.rb ###
+
 heroku run rake db:migrate
 
+### Edit: "viewport" ###
 
 [Model]-------------------------------
 rails generate scaffold Memo text:text url:string article_id:integer 
